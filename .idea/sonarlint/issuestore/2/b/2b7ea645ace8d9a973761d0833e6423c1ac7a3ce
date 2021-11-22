@@ -1,0 +1,9 @@
+
+kkotlin:S3776¥"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(‚¤¨“
+mkotlin:S117,"VRename this local variable to match the regular expression "^`?[_a-z][a-zA-Z0-9]*`?$".(ŸÆÄ·
+rkotlin:S117-"VRename this local variable to match the regular expression "^`?[_a-z][a-zA-Z0-9]*`?$".(Ê”ÿ½ÿÿÿÿÿ
+rkotlin:S1186"ZAdd a nested comment explaining why this function is empty or complete the implementation.(ä‡„ñ
+wkotlin:S1186"ZAdd a nested comment explaining why this function is empty or complete the implementation.(ðÞÕûùÿÿÿÿ
+rkotlin:S1186"ZAdd a nested comment explaining why this function is empty or complete the implementation.(Þêˆê
+wkotlin:S1186"ZAdd a nested comment explaining why this function is empty or complete the implementation.(µ¢¹Íùÿÿÿÿ
+Lkotlin:S1066Ü".Merge this "if" statement with the nested one.(“«ó™þÿÿÿÿ

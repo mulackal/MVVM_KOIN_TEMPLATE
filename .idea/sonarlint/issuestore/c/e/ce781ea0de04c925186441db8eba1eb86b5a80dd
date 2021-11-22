@@ -1,0 +1,9 @@
+
+Fkotlin:S108")Either remove or fill this block of code.(ÍÖ¥ºÿÿÿÿÿ
+qkotlin:S1192!"TDefine a constant instead of duplicating this literal "yyyy-MM-dd HH:mm:ss" 5 times.(êáãöùÿÿÿÿ
+ckotlin:S1192}"KDefine a constant instead of duplicating this literal "dd/MM/yyyy" 5 times.(­Íüú
+kkotlin:S3776õ"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¬…ùë
+Jkotlin:S1135j"2Complete the task associated to this TODO comment.(¬”„‚
+nkotlin:S117Õ"QRename this parameter to match the regular expression "^`?[_a-z][a-zA-Z0-9]*`?$".(ÆşÛùÿÿÿÿÿ
+hkotlin:S117—"QRename this parameter to match the regular expression "^`?[_a-z][a-zA-Z0-9]*`?$".(ÜıÏ6
+skotlin:S117˜"VRename this local variable to match the regular expression "^`?[_a-z][a-zA-Z0-9]*`?$".(ä¼•ùÿÿÿÿ

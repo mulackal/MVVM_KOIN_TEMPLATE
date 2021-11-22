@@ -1,0 +1,126 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+    // id 'androidx.navigation.safeargs'
+}
+
+def libs = rootProject.ext.libraries
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.mvvm.mykotlinkoin_template"
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // Server base url
+        buildConfigField "String", "BASE_URL", "\"https://5e510330f2c0d300147c034c.mockapi.io/\""
+        //Paging base url
+        buildConfigField "String", "PAGING_URL", "\"https://reqres.in/\""
+        //Paging base url 2
+        buildConfigField "String", "PAGING_URL2", "\"https://www.balldontlie.io/api/v1/\""
+
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding = true
+        //viewBinding = true
+    }
+
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation "androidx.recyclerview:recyclerview:${libs.recycler}"
+    implementation "androidx.cardview:cardview:${libs.cardview}"
+    //New Material Design
+    implementation "com.google.android.material:material:${libs.supportVersion}"
+
+    // loader shows
+    implementation "com.wang.avi:library:${libs.avi_library}"
+
+    //Gson
+    implementation "com.google.code.gson:gson:${libs.gson}"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:${libs.glide}"
+    kapt "com.github.bumptech.glide:compiler:${libs.glide}"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:${libs.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${libs.retrofit}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${libs.logging_interceptor}"
+
+    // Stetho -Network logging
+    implementation "com.facebook.stetho:stetho:${libs.stetho}"
+    implementation "com.facebook.stetho:stetho-okhttp3:${libs.stetho_okhttp3}"
+
+    //security library - support above sdk 23
+    //implementation "androidx.security:security-crypto:${libs.security}"
+
+    //Jetpack- Navigation
+    /*implementation "androidx.navigation:navigation-fragment-ktx:${libs.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${libs.navigation}"*/
+
+    // Data binding compiler for kotlin
+     kapt "com.android.databinding:compiler:${libs.data_bindind}"
+
+    //Dependency injection - Koin
+    implementation 'org.koin:koin-android:2.1.6'
+    implementation 'org.koin:koin-core:2.1.6'
+    implementation 'org.koin:koin-androidx-viewmodel:2.1.6'
+
+    // Lifecycle/ View Model
+    implementation "androidx.lifecycle:lifecycle-extensions:${libs.lifecycle_extensions}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${libs.lifecycle_compiler}"
+    kapt "androidx.lifecycle:lifecycle-compiler:${libs.lifecycle_compiler}"
+    implementation "androidx.lifecycle:lifecycle-livedata:${libs.lifecycle_extensions}"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${libs.lifecycle_runver}"
+
+    //Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${libs.coroutines}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${libs.coroutines}"
+
+    //Android Room
+   implementation "androidx.room:room-runtime:${libs.roomVersion}"
+   implementation "androidx.room:room-ktx:${libs.roomVersion}"
+   kapt "androidx.room:room-compiler:${libs.roomVersion}"
+   androidTestImplementation "androidx.room:room-testing:${libs.roomVersion}"
+
+    implementation "androidx.paging:paging-runtime:${libs.paging_version}"
+
+
+}
